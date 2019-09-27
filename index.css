@@ -1,0 +1,71 @@
+body {
+    font-family: serif;
+    /* background-image: url('Images/battleStation.jpg'); */
+    min-height: 100%;
+    min-width: 1024px;
+    
+    background-image: url("Images/handheld\ circuitry.jpg");
+    background-color: #cccccc;
+    background: cover;
+    background-position: center center;
+}
+
+header {
+    text-align: center;
+}
+html {
+    --dark-yellow:  #A3A380;
+    --dark:        #345;
+    color: var(--dark-yellow);
+    font: 50px/1
+    line-height: 1.5;
+}
+
+.left-menu {
+    grid-column: 1;
+    align-self: center;
+}
+
+.left-menu a {
+    padding: 10px 0;
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+
+.logo {
+    font-size: 40px;
+    padding: 1rem;
+}
+
+nav {
+    max-width: 1720px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+nav a {
+    color: blanchedalmond;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    transition: .3s all ease-in-out;
+}
+
+nav a:hover {
+    opacity: .8;
+    color: green;
+}
+
+.nav-container {
+    width: 100%;
+    background: black;
+}
+
+ul {
+    list-style-type: none;
+}
