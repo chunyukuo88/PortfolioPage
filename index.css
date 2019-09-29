@@ -1,8 +1,11 @@
+*{
+    font-family: 'Source Code Pro', sans-serif;
+}
+
 body {
-    font-family: serif;
     min-height: 100%;
     min-width: 1024px;
-    
+
     background-image: url("Images/handheld\ circuitry.jpg");
     background-color: #cccccc;
     background: cover;
@@ -12,30 +15,68 @@ body {
 button {
     background-color: #ffc728;
     border: none;
+    border-radius: 15px;
     color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
+    cursor: pointer;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    cursor: pointer;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
   }
 
+button:hover{
+    background: blue;
+    color: fuchsia;
+    transition: 2s;
+}
+
 .contact-container {
-    width: 100%;
-    background:blanchedalmond;
+        /* Non-grid stuff */
+    background: white;
+    border-radius: 15px;
+    color: darkolivegreen;
+    max-width: 110px;
+    width: 90%;
+    /* Grid stuff */
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-gap: 10px 10px; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:    1fr 1fr;
+    margin: 2rem auto 2rem auto;
+}
+
+.contact-container:hover {
+    background: none;
+    transition: 2s;
+}
+
+.copyright {
+    background: black;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 header {
     text-align: center;
 }
+
 html {
     --dark-yellow:  #A3A380;
     --dark:        #345;
     color: var(--dark-yellow);
     font: 50px/1
     line-height: 1.5;
+}
+
+.intro-in-three-points {
+    background: black;
+    color: #ffc728;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .left-menu {
@@ -58,24 +99,22 @@ html {
 }
 
 nav {
-    max-width: 1720px;
-    margin: 0 auto;
-
     display: grid;
     grid-template-columns: 1fr auto 1fr;
+    margin: 0 auto;
+    max-width: 1720px;
 }
 
 nav a {
     color: #ffc728;
     text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
     transition: .3s all ease-in-out;
 }
 
 nav a:hover {
     opacity: .8;
     color: green;
+    transition: 2s;
 }
 
 .nav-container {
@@ -83,6 +122,9 @@ nav a:hover {
     background: black;
 }
 
+.octocat {
+    vertical-align: sub;
+}
 ul {
     list-style-type: none;
 }
@@ -91,13 +133,14 @@ ul {
 /* Clip Fards! */
 
 .containerForThreeCards {
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin: 2rem auto;
-    padding: 11px;
     max-width: 1000px;
+    padding: 11px;
 }
 
 .flexItem {
@@ -117,25 +160,25 @@ ul {
 
 /* THE MAINCONTAINER HOLDS EVERYTHING */
 .maincontainer{
-    position: absolute;
-    width: 250px;
-    height: 320px;
     background: none;
-    top: 50%;
+    height: 320px;
     left: 50%;
+    position: absolute;
+    top: 50%;
     transform: translate(-50%, -50%);  
+    width: 250px;
 }
   
   /* THE CARD HOLDS THE FRONT AND BACK FACES */
 .thecard{
+    border-radius: 10px;
+    height: 60%;
+    left: 0;
     position: relative;
     top: 0;
-    left: 0;
-    width: 25%;
-    height: 50%;
-    border-radius: 10px;
     transform-style: preserve-3d;
     transition: all 0.8s ease;
+    width: 25%;
 }
   
   /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
@@ -145,13 +188,13 @@ ul {
   
   /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
 .thefront {
+    backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    backface-visibility: hidden;
     overflow: hidden;
     background-image: linear-gradient(to bottom right, #cc8800, #ffcc66);
     color: #000;
@@ -175,7 +218,6 @@ ul {
   
   /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
 .thefront h1, .theback h1{
-    font-family: 'zilla slab', sans-serif;
     padding: 30px;
     font-weight: bold;
     font-size: 24px;
@@ -183,7 +225,6 @@ ul {
 }
   
 .thefront p, .theback p{
-    font-family: 'zilla slab', sans-serif;
     padding: 30px;
     font-weight: normal;
     font-size: 12px;
@@ -204,7 +245,6 @@ ul {
     flex: 1;
     padding: 30px;
     font-size: 12px;
-    font-family: 'Robot', sans-serif;
 }
 
             /* This is the right internal flip card container: */
