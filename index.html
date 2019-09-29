@@ -8,18 +8,18 @@
     <title>Alex Gochenour | Home</title>
     <link rel="stylesheet" href="index.css">
     
-</head>
-
-
-
-<body>
-
+  </head>
   
+  
+  
+<body>
+    <a id="top"></a>
+    
   <div class="nav-container">
     <nav>
       <div class="left-menu">
         <a> About Me</a>
-        <a> Contact </a>
+        <a href="#contact-container"> Contact </a>
         <a>Projects</a> 
         <a href=indexZH.html>正體中文</a>
       </div>
@@ -34,53 +34,62 @@
 <!--                                  -->
 <!--                                  -->
 
-<div id="containerForThreeCards">
-
-  <div class="flexItem flexItem--1">
+<div id="cardGrid">
+  
+  <div class="gridItem gridItem--1">
     <div class="thecard">
       <div class="thefront">
         <h1>Virtual Pet Shelter</h1>
-        <center><img src="Images/virtualPetShelter.png"></center>
+        <center><img class="pic-of-pet-shelter" src="Images/virtualPetShelter3.png"></center>
       </div>
       <div class="theback">
-        <h1>My First Scrum Project</h1>
+        <h1>My First<br>Scrum Project</h1>
         <p>Made with Java/JUnit in Eclipse IDE using Agile (Scrum) methodology: Mob- & pair-programming, frequent commits.</p>
-        <a href="https://github.com/2019-Fall-Cohort/virtual-pets-amok-forage" target="_blank"><button>Check it out!</button></a>
+        <a href="https://github.com/2019-Fall-Cohort/virtual-pets-amok-forage" target="_blank"><button><strong>Check it out!</strong></button></a>
       </div>
-      </div>
-
-
-      <div class="thecard">
-        <div class="thefront">
-          <h1>Hospital Defender II</h1>
-          <center><img src="Images/hospitalDefender.png"></center>
-        </div>
-        <div class="theback">
-          <h1>Pair Programming Par Excellence</h1>
-          <p>Made with Java/JUnit in Eclipse IDE using pair-programming.</p>
-          <a href="https://github.com/2019-Fall-Cohort/university-clinic-hospital-auspicious-ninjas" target="_blank"><button>Check it out!</button></a>
-        </div>
-      </div>
-
-      <div class="thecard">
-        <div class="thefront">
-          <h1>My <ruby>Kata<rt>かた</rt></ruby></h1>
-          <center><img src="Images/codewarsLOGOlarge.png"></center>
-        </div>
-        <div class="theback">
-          <h1>Also known as <strong>"方"</strong></h1>
-            <p>This is my <strong>codewars.com</strong> profile, showing my kata stats. I do these daily.</p>
-          <a href="https://www.codewars.com/users/chunyukuo" target="_blank"><button>Check it out!</button></a>
-        </div>
-      </div>
-
+    </div>
   </div>
+    
+  <div class="gridItem gridItem--2">
+    <div class="thecard">
+      <div class="thefront">
+        <h1>Hospital Defender II</h1>
+        <center><img class="pic-of-hospital-defender" src="Images/hospitalDefender2.jpg"></center>
+      </div>
+      <div class="theback">
+        <h1>Pair Programming<br>Par Excellence</h1>
+        <p>Made with Java/JUnit in Eclipse IDE using pair-programming.</p>
+        <a href="https://github.com/2019-Fall-Cohort/university-clinic-hospital-auspicious-ninjas" target="_blank"><button><strong>Figh̷t ͠zo̡m͟b̸įe͜s!̶</strong></button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="gridItem gridItem--3">
+    <div class="thecard">
+      <div class="thefront">
+        <h1><ruby>My<rt>われの</rt></ruby> <ruby>Kata<rt>かた</rt></ruby></h1>
+        <center><img class="pic-of-codewars" src="Images/codewarsLOGOlarge.png"></center>
+      </div>
+      <div class="theback">
+        <h1>Also known as <strong>"方"</strong></h1>
+        <p>This is my <strong>codewars.com</strong> profile, showing my kata stats. I do these daily.</p>
+        <a href="https://www.codewars.com/users/chunyukuo" target="_blank"><button><strong>Check it out!</strong></button></a>
+      </div>
+    </div>
+  </div>
+
 </div>
 <!--                       -->
 <!-- No more cards for you -->
 <!--                       -->
 
 </body>
+
+<center>
+    <form action="#top">
+        <button type="submit">Back to Top</button>
+    </form>
+</center>
 
   <footer>
         <div class="contact-container">

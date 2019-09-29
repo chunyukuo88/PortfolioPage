@@ -6,7 +6,7 @@ body {
     min-height: 100%;
     min-width: 1024px;
 
-    background-image: url("Images/handheld\ circuitry.jpg");
+    background-image: url("Images/handheld\ circuitry2.jpg");
     background-color: #cccccc;
     background: cover;
     background-position: center center;
@@ -24,6 +24,7 @@ button {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
+    transition: 4s;
   }
 
 button:hover{
@@ -47,11 +48,13 @@ button:hover{
     grid-template-columns: 1fr 1fr;
     grid-template-rows:    1fr 1fr;
     margin: 2rem auto 2rem auto;
+    transition: 3s; /* Both this class and the .contact-container:hover have transitions. This is deliberate to allow for transitions both when you hover over and move the cursor away from this thing.*/
 }
 
 .contact-container:hover {
     background: none;
-    transition: 2s;
+    filter: invert(1);
+    transition: 3s;
 }
 
 .copyright {
@@ -59,6 +62,7 @@ button:hover{
     display: flex;
     flex-direction: row-reverse;
 }
+
 
 header {
     text-align: center;
@@ -96,6 +100,7 @@ html {
 .logo {
     font-size: 40px;
     padding: 1rem;
+    transition: 3s;
 }
 
 nav {
@@ -113,7 +118,7 @@ nav a {
 
 nav a:hover {
     opacity: .8;
-    color: green;
+    color: fuchsia;
     transition: 2s;
 }
 
@@ -125,6 +130,19 @@ nav a:hover {
 .octocat {
     vertical-align: sub;
 }
+
+.pic-of-codewars {
+    border-radius: 15px;
+}
+.pic-of-hospital-defender {
+    border-radius: 15px;
+}
+
+.pic-of-pet-shelter {
+    border-radius: 15px;
+}
+
+
 ul {
     list-style-type: none;
 }
@@ -132,23 +150,20 @@ ul {
 /* Flip Cards! */
 /* Clip Fards! */
 
-.containerForThreeCards {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+.cardGrid {
+    display: grid;
+    grid-gap: 15px 20px;
+    grid-column: 1;
     margin: 2rem auto;
-    max-width: 1000px;
-    padding: 11px;
-}
+    width: 1000px;
+  }
 
-.flexItem {
+.gridItem {
     margin-left: 5px;
     padding: 11px;
 }
 
-.flexItem:first-child {
+.gridItem:first-child {
     margin: 0;
 }
 
