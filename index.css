@@ -1,3 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+.line-1, .line-2, .line-3 {
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+
+
+
+
 *{
     font-family: 'Source Code Pro', sans-serif;
 }
@@ -74,6 +102,7 @@ html {
     color: var(--dark-yellow);
     font: 50px/1
     line-height: 1.5;
+    min-height: 100%;
 }
 
 .intro-in-three-points {
@@ -95,6 +124,8 @@ html {
     font-weight: 300;
     letter-spacing: 0.5px;
 }
+
+
 
 
 .logo {
@@ -270,3 +301,5 @@ ul {
 font-size: 12px;
 font-family: 'Robot', sans-serif;
 }
+
+
