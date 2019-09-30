@@ -1,30 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-.line-1, .line-2, .line-3 {
-    position: relative;
-    top: 50%;  
-    width: 24em;
-    margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);    
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
 }
-
-/* Animation */
-.anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 24em;}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom right, #cc8800, #ffcc66);
 }
-
-
-
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+}
 
 *{
     font-family: 'Source Code Pro', sans-serif;
@@ -113,20 +107,30 @@ html {
 }
 
 .left-menu {
-    grid-column: 1;
     align-self: center;
+    grid-column: 1;
 }
 
 .left-menu a {
-    padding: 10px 0;
-    margin-left: 15px;
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.5px;
+    margin-left: 15px;
+    padding: 10px 0;
 }
 
-
-
+.line-1, .line-2, .line-3 {
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    top: 50%;  
+    transform: translateY(-50%);    
+    white-space: nowrap;
+    width: 24em;
+}
 
 .logo {
     font-size: 40px;
@@ -148,14 +152,14 @@ nav a {
 }
 
 nav a:hover {
-    opacity: .8;
     color: fuchsia;
+    opacity: .8;
     transition: 2s;
 }
 
 .nav-container {
-    width: 100%;
     background: black;
+    width: 100%;
 }
 
 .octocat {
@@ -173,7 +177,6 @@ nav a:hover {
     border-radius: 15px;
 }
 
-
 ul {
     list-style-type: none;
 }
@@ -181,28 +184,31 @@ ul {
 /* Flip Cards! */
 /* Clip Fards! */
 
-.cardGrid {
+.card-grid {
     display: grid;
-    grid-gap: 15px 20px;
-    grid-column: 1;
-    margin: 2rem auto;
-    width: 1000px;
+    gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    height: 100%;
+    width: 100%;
+    grid-auto-flow: dense;
   }
 
-.gridItem {
-    margin-left: 5px;
-    padding: 11px;
+.grid-item {
+    background-size:cover;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* Flexbox plus grid... results in a slight improvement. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.gridItem:first-child {
+.grid-item:first-child {
     margin: 0;
 }
-
-
-
-
-
-
 
 /* THE MAINCONTAINER HOLDS EVERYTHING */
 .maincontainer{
@@ -215,6 +221,9 @@ ul {
     width: 250px;
 }
   
+.submit {
+    background-image: url("");
+}
   /* THE CARD HOLDS THE FRONT AND BACK FACES */
 .thecard{
     border-radius: 10px;
@@ -224,7 +233,7 @@ ul {
     top: 0;
     transform-style: preserve-3d;
     transition: all 0.8s ease;
-    width: 25%;
+    width: 80%; /*EXTREMELY IMPORTANT*/
 }
   
   /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
@@ -234,72 +243,70 @@ ul {
   
   /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
 .thefront {
+    background-image: linear-gradient(to bottom right, #cc8800, #ffcc66);
     backface-visibility: hidden;
+    border-radius: 10px;
+    color: #000;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    background-image: linear-gradient(to bottom right, #cc8800, #ffcc66);
-    color: #000;
 }
   
   /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
 .theback{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
     backface-visibility: hidden;
-    overflow: hidden;
     background-image: linear-gradient(to bottom right, #ff00ff, purple);
+    border-radius: 10px;
     color: white;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
     text-align: center;
+    top: 0;
     transform: rotateY(180deg);
+    width: 100%;
 }
   
   /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
 .thefront h1, .theback h1{
-    padding: 30px;
-    font-weight: bold;
     font-size: 24px;
+    font-weight: bold;
+    padding: 30px;
     text-align: center;
 }
   
 .thefront p, .theback p{
-    padding: 30px;
-    font-weight: normal;
     font-size: 12px;
+    font-weight: normal;
+    padding: 30px;
     text-align: center;
 }
 
             /* This is the flip card container: */
 .holdingContainer { 
-    display: flex;
-    width: 100;
     background: #ffc728;
-    padding: 50px;
     box-sizing: border-box;
+    display: flex;
+    padding: 50px;
+    width: 100;
 }
             /* This is the left internal flip card container: */
 .internalContainerL {
     background: red;
     flex: 1;
-    padding: 30px;
     font-size: 12px;
+    padding: 30px;
 }
 
             /* This is the right internal flip card container: */
 .internalContainerR {
     background: cyan;
     flex: 1;
+    font-family: 'Robot', sans-serif;
+    font-size: 12px;
     padding: 30px;
-font-size: 12px;
-font-family: 'Robot', sans-serif;
 }
-
-
