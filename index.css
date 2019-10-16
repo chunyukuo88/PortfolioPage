@@ -103,7 +103,7 @@ html {
     background: black;
     color: #ffc728;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: center;
     transition: 4s;
 }
 
@@ -249,10 +249,10 @@ ul {
   
   /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
 .thefront {
-    background-image: linear-gradient(to bottom right, #cc8800, #ffcc66);
+    background-image: linear-gradient(to bottom right, #865900, rgb(68, 42, 42));
     backface-visibility: hidden;
     border-radius: 10px;
-    color: #000;
+    color: #ffc728;
     height: 100%;
     left: 0;
     overflow: hidden;

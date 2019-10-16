@@ -6,7 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alex Gochenour | Home</title>
-    <link rel="stylesheet" href="index.css">    
+    <link rel="stylesheet" href="index.css">
+    <style>
+      .intro-in-three-points:before{
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-name: my-title-change;
+        animation-timing-function: ease;
+        content: 'Web Developer';
+      }
+
+      @keyframes my-title-change{
+        0%  {content: "Hardware Hacker"; opacity: 0;}
+        16% {content: "Hardware Hacker"; opacity: 1;}
+        33% {content: "Hardware Hacker"; opacity: 0;}
+
+        34% {content: "Distance Runner"; opacity: 0;}
+        48% {content: "Distance Runner"; opacity: 1;}
+        66% {content: "Distance Runner"; opacity: 0;}
+
+        67% {content: "Web Developer";   opacity: 0;}
+        82% {content: "Web Developer";   opacity: 1;}
+        100%{content: "Web Developer";   opacity: 0;}
+      }
+    </style>
 </head>
   
 <body>
@@ -23,7 +46,8 @@
     </nav>
   </div>
   
-  <p class="intro-in-three-points"> · Web Developer · Hardware Hacker · Distance Runner ·</p>
+  <p class="intro-in-three-points"></p>
+  <!-- <p class="intro-in-three-points"> · Web Developer · Hardware Hacker · Distance Runner ·</p> -->
 
                             <!-- Here be three carrrrrrds, matey. -->
 
