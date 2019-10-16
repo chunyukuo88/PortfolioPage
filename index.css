@@ -58,7 +58,7 @@ button:hover{
 .contact-container {
         /* Non-grid stuff */
     background: white;
-    border-radius: 15px;
+    border-radius: 28px 0px 25px 0px;
     color: darkolivegreen;
     max-width: 110px;
     width: 90%;
@@ -250,7 +250,7 @@ ul {
   
   /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
 .thefront {
-    background-image: linear-gradient(to bottom right, #865900, rgb(68, 42, 42));
+    background-image: linear-gradient(to bottom right, #000000, rgb(228, 3, 89));
     backface-visibility: hidden;
     border-radius: 10px;
     color: #ffc728;
