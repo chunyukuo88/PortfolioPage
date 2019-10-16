@@ -104,6 +104,7 @@ html {
     color: #ffc728;
     display: flex;
     justify-content: center;
+    position: relative;
     transition: 4s;
 }
 
