@@ -1,16 +1,26 @@
+/* THE MAINCONTAINER HOLDS EVERYTHING */
+.maincontainer{
+    background: none;
+    height: 320px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);  
+    width: 250px;
+}
 
 .card-grid {
     display: grid;
     gap: 0;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 3fr;
+    grid-template-rows: auto;
     height: 80%;
     width: 100%;
     grid-auto-flow: dense;
   }
 
 .grid-item {
-    background-size:cover;
+    background-size: cover;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -25,22 +35,8 @@
     margin: 0;
 }
 
-/* THE MAINCONTAINER HOLDS EVERYTHING */
-.maincontainer{
-    background: none;
-    height: 320px;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);  
-    width: 250px;
-}
-  
-.submit {
-    background-image: url("");
-}
   /* THE CARD HOLDS THE FRONT AND BACK FACES */
-.thecard{
+  .thecard{
     border-radius: 10px;
     height: 60%;
     left: 0;
@@ -51,6 +47,11 @@
     width: 80%; /*EXTREMELY IMPORTANT*/
 }
   
+  
+.submit {
+    background-image: url("");
+}
+
   /* THE PSEUDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
 .thecard:hover{
     transform: rotateY(180deg);
@@ -146,4 +147,8 @@
     position: relative;
     top: 0;
     width: 80%; /*EXTREMELY IMPORTANT*/
+}
+
+#static-front {
+    background-color: #000000;
 }
