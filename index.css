@@ -78,9 +78,9 @@ header {
 }
 
 #howzit {
-    font-size: 140%;
     color: rgb(168, 167, 167);
-    color: 
+    font-size: 90%;
+    padding: 5%;
 }
 
 html {
