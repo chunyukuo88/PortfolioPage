@@ -7,6 +7,13 @@
 
 #about-me {
     color: rgb(243, 246, 29);
+    filter: blur(1px);
+    transition: 1s;
+}
+
+#about-me:hover {
+    filter: blur(0px);
+    transition: 0.5s;
 }
 
 #alert.logo {
@@ -229,6 +236,7 @@ nav ul ul li {
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
+    filter: blur(0px);
 }
 
 .pic-of-pet-shelter {
