@@ -160,6 +160,11 @@
     width: 80%; /*EXTREMELY IMPORTANT*/
 }
 
+iframe {
+    display: block;
+    margin: auto;
+}
+
 #static-front {
     background-color: #000000;
 }
