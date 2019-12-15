@@ -9,6 +9,11 @@
     color: rgb(243, 246, 29);
 }
 
+#alert.logo {
+    background: inherit;
+    box-shadow: inset 0 0 0 3000px rgba(160, 121, 121, 0.363);
+}
+
 .back-to-top-button {
     text-align: center;
 }
@@ -72,14 +77,18 @@ button:hover{
 }
 
 .contact-line {
-    background: black;
+    background: inherit;
+    box-shadow: inset 0 0 0 3000px rgba(49, 42, 42, 0.363);
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
 
 .copyright {
-    background: black;
+    background: inherit;
+    box-shadow: inset 0 0 0 3000px rgba(160, 121, 121, 0.363);
+    
     display: flex;
     flex-direction: row-reverse;
 }
@@ -108,12 +117,14 @@ html {
 }
 
 .intro-in-three-points {
-    background: black;
     color: var(--orange);
     display: flex;
     justify-content: center;
     position: relative;
     transition: 4s;
+
+    background: inherit;
+    box-shadow: inset 0 0 0 3000px rgba(49, 42, 42, 0.363);
 }
 
 .intro-in-three-points:hover {
