@@ -1,8 +1,5 @@
-document.getElementsByTagName('p')[1].onclick = function() {
-    this.style.backgroundColor = `gray`;
-}
-
-let alertButton = document.getElementById('alert');
-alertButton.onclick = function() {
-    alert('Fun fact: Alex is my legal first name, not Alexander.');
-}
+function myFunction() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
